@@ -4,8 +4,12 @@ from .models import (
     GeneralEmotion,
     GeneralEmotionLog,
     Habit,
+    HabitLog,
     Event,
-    Health
+    EventLog,
+    MainHealth,
+    Health,
+    HealthLog
 )
 
 
@@ -43,4 +47,28 @@ class HealthSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Health
+        fields = "__all__"
+
+class MainHealthSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MainHealth
+        fields = "__all__"
+
+class HealthLogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = HealthLog
+        fields = "__all__"
+
+class EventLogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EventLog
+        fields = "__all__"
+
+class HabitLogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = HabitLog
         fields = "__all__"

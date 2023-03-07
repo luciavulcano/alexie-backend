@@ -6,6 +6,10 @@ from .serializers import (
     HabitSerializer,
     EventSerializer,
     HealthSerializer,
+    HabitLogSerializer,
+    EventLogSerializer,
+    MainHealthSerializer,
+    HealthLogSerializer
 )
 from .filters import (
     MainEmotionFilter,
@@ -14,14 +18,22 @@ from .filters import (
     HabitFilter,
     EventFilter,
     HealthFilter,
+    HabitLogFilter,
+    EventLogFilter,
+    HealthLogFilter,
+    MainHealthFilter
 )
 from .models import (
     MainEmotion,
     GeneralEmotion,
     GeneralEmotionLog,
     Habit,
+    HabitLog,
     Event,
-    Health
+    EventLog,
+    MainHealth,
+    Health,
+    HealthLog
 )
 
 class MainEmotionViewSet(viewsets.ModelViewSet):
@@ -48,14 +60,38 @@ class HabitViewSet(viewsets.ModelViewSet):
     serializer_class = HabitSerializer
     filterset_class = HabitFilter
 
+class HabitLogViewSet(viewsets.ModelViewSet):
+
+    queryset = HabitLog.objects.all()
+    serializer_class = HabitLogSerializer
+    filterset_class = HabitLogFilter
+
 class EventViewSet(viewsets.ModelViewSet):
 
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     filterset_class = EventFilter
 
+class EventLogViewSet(viewsets.ModelViewSet):
+
+    queryset = EventLog.objects.all()
+    serializer_class = EventLogSerializer
+    filterset_class = EventLogFilter
+
 class HealthViewset(viewsets.ModelViewSet):
 
     queryset = Health.objects.all()
     serializer_class = HealthSerializer
     filterset_class = HealthFilter
+
+class HealthLogViewset(viewsets.ModelViewSet):
+
+    queryset = HealthLog.objects.all()
+    serializer_class = HealthLogSerializer
+    filterset_class = HealthLogFilter
+
+class MainHealthViewset(viewsets.ModelViewSet):
+
+    queryset = MainHealth.objects.all()
+    serializer_class = MainHealthSerializer
+    filterset_class = MainHealthFilter

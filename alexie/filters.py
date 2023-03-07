@@ -4,8 +4,12 @@ from .models import (
     GeneralEmotion,
     GeneralEmotionLog,
     Habit,
+    HabitLog,
     Event,
-    Health
+    EventLog,
+    MainHealth,
+    Health,
+    HealthLog
 )
 
 class MainEmotionFilter(filters.FilterSet):
@@ -42,4 +46,28 @@ class HealthFilter(filters.FilterSet):
 
     class Meta:
         model = Health
+        fields = "__all__"
+
+class HabitLogFilter(filters.FilterSet):
+
+    class Meta:
+        model = HabitLog
+        fields = "__all__"
+
+class EventLogFilter(filters.FilterSet):
+
+    class Meta:
+        model = EventLog
+        fields = "__all__"
+
+class MainHealthFilter(filters.FilterSet):
+
+    class Meta:
+        model = MainHealth
+        fields = "__all__"
+
+class HealthLogFilter(filters.FilterSet):
+
+    class Meta:
+        model = HealthLog
         fields = "__all__"
