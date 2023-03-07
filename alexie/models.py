@@ -94,12 +94,12 @@ class Event(models.Model):
 
     created_by = models.ForeignKey(
         get_user_model(),
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         on_delete=models.CASCADE,
     )
     description = models.CharField(
-        max_length=50,
+        max_length=100,
         null=False,
         blank=False,
     )
@@ -147,8 +147,8 @@ class Health(models.Model):
 
     created_by = models.ForeignKey(
         get_user_model(),
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         on_delete=models.CASCADE,
     )
     description = models.CharField(
