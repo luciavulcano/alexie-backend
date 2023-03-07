@@ -71,7 +71,7 @@ class Habit(models.Model):
         on_delete=models.CASCADE,
     )
 
-class HabitsLog(models.Model):
+class HabitLog(models.Model):
 
     created_in = models.DateTimeField(
         auto_now_add=True,
@@ -107,6 +107,42 @@ class Event(models.Model):
         auto_now_add=True,
     )
 
+class EventLog(models.Model):
+
+    created_in = models.DateTimeField(
+        auto_now_add=True,
+    )
+    created_by = models.ForeignKey(
+        get_user_model(),
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+    )
+    event = models.ForeignKey(
+        Event,
+        related_name="logs",
+        null=False,
+        blank=False,
+        on_delete=models.PROTECT,
+    )
+
+class MainHealth(models.Model):
+
+    description = models.CharField(
+        max_length=50,
+        null=False,
+        blank=False,
+    )
+    created_by = models.ForeignKey(
+        get_user_model(),
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+    )
+    created_in = models.DateTimeField(
+        auto_now_add=True,
+    )
+
 class Health(models.Model):
 
     created_by = models.ForeignKey(
@@ -122,4 +158,23 @@ class Health(models.Model):
     )
     created_in = models.DateTimeField(
         auto_now_add=True,
+    )
+
+class HealthLog(models.Model):
+
+    created_in = models.DateTimeField(
+        auto_now_add=True,
+    )
+    created_by = models.ForeignKey(
+        get_user_model(),
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+    )
+    health = models.ForeignKey(
+        Health,
+        related_name="logs",
+        null=False,
+        blank=False,
+        on_delete=models.PROTECT,
     )
