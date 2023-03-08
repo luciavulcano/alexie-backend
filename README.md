@@ -5,8 +5,11 @@ this is the backend repository for 'alexie', a project of a emotional diary for 
 in this project, we use:
 
 | ![Python](    https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=whit)       | [Python](https://www.python.org/)       | v3.9.10 |
+
 | ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)   | [Django](https://www.djangoproject.com/)        | v4.1.5     |
+
 | ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)   | [Django Rest Framework](https://www.django-rest-framework.org/)        | v3.14      |
+
 | ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)   | [PostgreSQL](https://www.postgresql.org/)       | v12.9      |
 
 running in windows:
