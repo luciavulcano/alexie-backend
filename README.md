@@ -30,7 +30,7 @@ your env is created and active to run the project
 populate the db
   - python manage.py makemigrations
   - python manage.py migrate
-  - python manage.py loaddate <name_app>
+  - python manage.py loaddata <name_app>
 
 create an superuser
   - python manage.py createsuperuser
