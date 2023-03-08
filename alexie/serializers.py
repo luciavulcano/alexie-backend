@@ -37,6 +37,7 @@ class GeneralEmotionLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = GeneralEmotionLog
         fields = "__all__"
+        depth = 1
 
 class HabitSerializer(serializers.ModelSerializer):
 
@@ -69,6 +70,7 @@ class HealthLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = HealthLog
         fields = "__all__"
+        depth = 1
 
 class EventLogSerializer(serializers.ModelSerializer):
 
@@ -76,6 +78,7 @@ class EventLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = EventLog
         fields = "__all__"
+        depth = 1
 
 class HabitLogSerializer(serializers.ModelSerializer):
 
@@ -84,3 +87,4 @@ class HabitLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = HabitLog
         fields = "__all__"
+        depth = 1
