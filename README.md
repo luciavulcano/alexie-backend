@@ -27,6 +27,11 @@ create an env
     activate.bat
 your env is created and active to run the project
 
+so, you need to go to the folder you cloned the project
+
+install the libs
+  - pip install -r requirements.txt
+
 populate the db
   - python manage.py makemigrations
   - python manage.py migrate
