@@ -82,12 +82,11 @@ CORS_ORIGIN_ALLOW_ALL = True
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("BD_NAME"),
-        "USER": config("BD_USERNAME"),
-        "PASSWORD": config("BD_PASSWORD"),
-        "HOST": config("BD_HOST"),
-        "PORT": config("BD_PORT"),
-        "OPTIONS": {"options": f"-c search_path={config('BD_SCHEMA', default='public')}"},
+        "NAME": config("PGDATABASE"),
+        "USER": config("PGUSER"),
+        "PASSWORD": config("PGPASSWORD"),
+        "HOST": config("PGHOST"),
+        "PORT": config("PGPORT")
     }
 }
 
