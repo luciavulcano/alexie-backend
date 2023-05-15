@@ -75,6 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "core.wsgi.application"
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Database
