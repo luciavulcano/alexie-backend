@@ -41,6 +41,6 @@ create an superuser
   - python manage.py createsuperuser
 
 run the project
-  - python manage.py runserver
+  - python manage.py runserver 
 
     
