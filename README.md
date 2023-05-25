@@ -20,7 +20,7 @@ you need to open your terminal and:
 
 create an env
   - choose a folder and run
-    python -m env <folder_name>
+    python -m venv <folder_name>
     
   - go to the folder you created and inside it, there is a script folder.
   - in the script folder, you run 
